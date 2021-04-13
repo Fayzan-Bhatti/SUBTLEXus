@@ -1,14 +1,19 @@
 # SUBTLEXus
 
-TASK1:	download SUBTLEX-US (Links to an external site.) and	load	it	into	a	Pandas	df.	
+#TASK1:	
 This	lexicon	provides	a	list	of	words	with	their	frequency	counts	extracted	from	a	
 corpus	of	subtitles	from	movies	and	web	series.	1	point:	Your	notebook	should	show	the	
 first	10	lines	of	the	Pandas	df storing	the	dataset.
-TASK2:	create	two	iterables	of	strings	(e.g.	list	or	set	of	strings).	The	first	contains	word	
+
+#TASK2:	
+create	two	iterables	of	strings	(e.g.	list	or	set	of	strings).	The	first	contains	word	
 types	from	SUBTLEX	and	the	other	word	tokens	from	SUBTLEX.	Mind	the	difference	and	
 the	relation	between	types/tokens	and	frequency.	2	points:	Your	iterables	should	
 contain	the	right	items	and	the	right	number	of	items.
-TASK3:	implement	a	character	level	language	model	with	Laplace	smoothing	and	a	
+
+
+#TASK3:	
+implement	a	character	level	language	model	with	Laplace	smoothing	and	a	
 constant	k=0.01	which	takes	the	following	input	arguments:
 - an	iterable	containing	the	target	strings
 - the	size	of	the	character	ngrams
@@ -22,7 +27,10 @@ amount	of	EoS	symbols
 - 4	points	if	your	model	estimates	the	right	transition	matrix
 - 2	points	if	your	model	computes	perplexity	correctly
 - 2	points	if	your	model	generates	strings	correctly
-TASK4:	find	the	word	from	SUBTLEX	with	the	lowest	perplexity	given	the	following	
+
+
+#TASK4:	
+find	the	word	from	SUBTLEX	with	the	lowest	perplexity	given	the	following	
 language	models:
 - trigram,	token-based
 - trigram,	type-based
@@ -33,7 +41,10 @@ dataset	(types	or	tokens),	the	word	with	lowest	perplexity,	and	the	perplexity
 score. Comment	on	your	results	by	highlighting	differences	and	similarities	across	
 models.	7	points:	your	code	should	return	the	right	words	and	corresponding	perplexity	
 scores	for	all	LMs	(4	points),	and	your	comments	must	be	appropriate	(3	points).
-TASK5:	starting	from	the	BoS	symbol,	generate	the	likeliest	string	given	the	following	
+
+
+#TASK5:	
+starting	from	the	BoS	symbol,	generate	the	likeliest	string	given	the	following	
 language	models	(make	sure	you	don't	generate	strings	longer	than	50	characters):
 - trigram,	token-based
 - trigram,	type-based
@@ -44,7 +55,11 @@ information: ngram	size,	input	dataset	(types	or	tokens),	and	the	string	each	mo
 generates	as	the	likeliest.	Comment	on	similarities	and	differences	across	them	and	
 explain	what	these	strings	represent	in	terms	of	English	orthotactics. . 7	points:	the	
 generated	strings	need	to	be	correct	(4	points)	and	your	comments	on	point	(3	points).
-TASK6:	starting	from	the	BoS	symbol,	generate	10	different	strings,	according	to	the	LM	
+
+
+
+#TASK6:	
+starting	from	the	BoS	symbol,	generate	10	different	strings,	according	to	the	LM	
 probabilities,	given	the	following	language	models	(make	sure	you	don't	generate	
 strings	longer	than	50	characters):
 - trigram,	token-based
@@ -70,7 +85,10 @@ To	install	the	extra	Python	package	from	GitHub:
 4. cd	to	the	package	folder
 4.	run	pip	install	.
 5.	check	the	requirements	of	the	package	and	install	the	necessary	modules.
-TASK7: visit the NorthEuraLex (Links to an external site.) dataset	and	fetch	the	
+
+
+#TASK7: 
+visit the NorthEuraLex (Links to an external site.) dataset	and	fetch	the	
 appropriate	translations	for	the	concepts MOUTH,	DREAM,	SUN,	APPLE,	BRIDGE,	
 MIRROR,	SKY,	FISH,	ROOSTER,	SON in English,	Czech,	Dutch,	Finnish,	Italian,	and	
 Basque.	Compute	the	perplexity	for	each	translation	given	the	following	language	models	trained	on	SUBTLEX:
